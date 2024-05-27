@@ -77,5 +77,17 @@
 // const btn = document.getElementById("mybtn")!; --- !
 // const btn = <HTMLElement> document.getElementById("mybtn"); --- <HTMLElement>
 // const btn = <HTMLElement> document.getElementById("mybtn");
-const img = document.getElementById("MYimg");
-img.src;
+// const img = document.getElementById("MYimg") as HTMLImageElement;
+// GET DATA
+const form = document.getElementById("MyForm");
+const input = document.querySelector("form > input");
+form.onsubmit = (e) => {
+    e.preventDefault();
+    const value = Number(input.value);
+    console.log(value);
+    console.log(typeof value);
+    const h2 = document.createElement("h1");
+    h2.textContent = String(value + 20);
+    const body = document.querySelector("body");
+    body.append(h2);
+};

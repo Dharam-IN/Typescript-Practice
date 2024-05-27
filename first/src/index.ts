@@ -113,6 +113,5 @@
 // const btn = <HTMLElement> document.getElementById("mybtn"); --- <HTMLElement>
 // const btn = <HTMLElement> document.getElementById("mybtn");
 
-const img = document.getElementById("MYimg") as HTMLImageElement;
+// const img = document.getElementById("MYimg") as HTMLImageElement;
 
-img.src
