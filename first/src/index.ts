@@ -62,22 +62,57 @@
 // console.log(obj)
 
 // INTERFACE IN TYPESCRIPT OBJECTS
-interface obj {
-    fname: string,
-    age?: number,
-    married: boolean
-}
+// interface obj {
+//     fname: string,
+//     age?: number,
+//     married: boolean
+// }
 
-interface newobj extends obj {
-    scoller: boolean,
-    func?: () => void
-}
+// interface newobj extends obj {
+//     scoller: boolean,
+//     func?: () => void
+// }
 
-const myobj:newobj = {
-    fname: "india",
-    age: 19,
-    married: false,
-    scoller: true
-}
+// const myobj:newobj = {
+//     fname: "india",
+//     age: 19,
+//     married: false,
+//     scoller: true
+// }
 
-console.log(myobj)
+// console.log(myobj)
+
+
+
+
+// CLASSES IN TYPESCRIPT
+// class Player {
+//     private height;
+//     public weight;
+
+//     constructor(height: number, weight: number){
+//         this.height = height,
+//         this.weight = weight
+//     }
+
+//     myfun(){
+//         return this.height;
+//     }
+// }
+
+// const dharam = new Player(175, 100);
+// console.log(dharam.myfun())
+
+
+
+
+// TYPE ASSERTION
+// Three way to define
+// const btn = document.getElementById("mybtn") as HTMLElement; --- as HTMLElement
+// const btn = document.getElementById("mybtn")!; --- !
+// const btn = <HTMLElement> document.getElementById("mybtn"); --- <HTMLElement>
+// const btn = <HTMLElement> document.getElementById("mybtn");
+
+const img = document.getElementById("MYimg") as HTMLImageElement;
+
+img.src
