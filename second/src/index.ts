@@ -66,33 +66,50 @@
 // const ans2 = func("india");
 // const ans3 = func(true);
 
+// type Person = {
+//     name: string,
+//     age: number
+// };
+
+// const Users: Person[] = [
+//     {
+//         name: "Dharam",
+//         age: 19,
+//     },
+//     {
+//         name: "Karam",
+//         age: 19
+//     },
+//     {
+//         name: "Radhe",
+//         age: 22
+//     },
+//     {
+//         name: "Ram",
+//         age: 20
+//     },
+// ]
+
+// const filterByPeoples = <T, U extends keyof T>(arr: T[], property: U, value: T[U]): T[] => {
+//     return arr.filter((item) => item[property] === value)
+// }
+
+// const filterPeopleUsingName = filterByPeoples(Users, "name", "Ram")
+// console.log(filterPeopleUsingName)
+
 type Person = {
     name: string,
     age: number
-};
-
-const Users: Person[] = [
-    {
-        name: "Dharam",
-        age: 19,
-    },
-    {
-        name: "Karam",
-        age: 19
-    },
-    {
-        name: "Radhe",
-        age: 22
-    },
-    {
-        name: "Ram",
-        age: 20
-    },
-]
-
-const filterByPeoples = <T, U extends keyof T>(arr: T[], property: U, value: T[U]): T[] => {
-    return arr.filter((item) => item[property] === value)
 }
 
-const filterPeopleUsingName = filterByPeoples(Users, "name", "Ram")
-console.log(filterPeopleUsingName)
+const User: Person = {
+    name: "Ram",
+    age: 30
+}
+
+function getProperty<T, K extends keyof T>(obj: T, key: K){
+    return obj[key]
+}
+
+const getName = getProperty(User, "age")
+console.log(getName)
