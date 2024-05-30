@@ -97,19 +97,32 @@
 // const filterPeopleUsingName = filterByPeoples(Users, "name", "Ram")
 // console.log(filterPeopleUsingName)
 
-type Person = {
+// type Person = {
+//     name: string,
+//     age: number
+// }
+
+// const User: Person = {
+//     name: "Ram",
+//     age: 30
+// }
+
+// function getProperty<T, K extends keyof T>(obj: T, key: K){
+//     return obj[key]
+// }
+
+// const getName = getProperty(User, "age")
+// console.log(getName)
+
+
+
+type Users = {
     name: string,
     age: number
 }
 
-const User: Person = {
-    name: "Ram",
-    age: 30
+let user: Users = {
+    name: "India",
+    age: 19
 }
-
-function getProperty<T, K extends keyof T>(obj: T, key: K){
-    return obj[key]
-}
-
-const getName = getProperty(User, "age")
-console.log(getName)
+console.log(user)
